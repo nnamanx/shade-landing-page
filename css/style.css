@@ -1,0 +1,321 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap");
+
+/* 
+link to originl page: https://finestdevs.com/demos/shade-preview/index-15.html
+grey: rgb(88, 88, 88)
+blue: rgb(21, 126, 255)
+orange: rgb(252, 74, 43)
+background blue: rgb(224, 236, 247)
+
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Karla", sans-serif;
+}
+
+body {
+  background-color: rgb(224, 236, 247);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 800px;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  outline: none;
+  cursor: pointer;
+  color: #000;
+}
+
+a:link {
+  text-decoration: none;
+}
+
+.btn {
+  color: #fff;
+  border: none;
+}
+
+/* !NAVBAR */
+nav {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.navbar {
+  width: 75%;
+  margin: 1% 0;
+  padding: 1% 0;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.logo {
+  width: 100px;
+  height: auto;
+  margin-right: 3%;
+  cursor: pointer;
+}
+
+.nav-links ul {
+  width: 400px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav-links a {
+  font-size: 1em;
+}
+
+/* DROPDOWN MENU */
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown-btn {
+  background-color: rgb(224, 236, 247);
+  border: none;
+  outline: none;
+  font-size: 1em;
+  width: 100px;
+}
+
+.dropdown-content a {
+  float: left;
+  font-size: 1em;
+  color: #000;
+  text-align: center;
+  padding: 1em;
+  text-decoration: none;
+}
+
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+/* Add a background color to dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: rgb(224, 236, 247);
+  transition: 0.6s;
+  -webkit-transition: 0.6s;
+  -moz-transition: 0.6s;
+  -ms-transition: 0.6s;
+  -o-transition: 0.6s;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* MENU ICON */
+.menu-icon {
+  display: inline-block;
+  cursor: pointer;
+}
+
+.bar1,
+.bar2,
+.bar3 {
+  width: 12px;
+  height: 1.5px;
+  background-color: #333;
+  margin-left: 6px;
+  transition: 0.4s;
+}
+
+.bar1,
+.bar2 {
+  margin-bottom: 3px;
+}
+
+/* Rotate the frist bar */
+.change .bar1 {
+  -webkit-transform: rotate(-45deg) translate(-1px, 5px);
+  transform: rotate(-45deg) translate(-1px, 5px);
+  -moz-transform: rotate(-45deg) translate(-1px, 5px);
+  -ms-transform: rotate(-45deg) translate(-1px, 5px);
+  -o-transform: rotate(-45deg) translate(-1px, 5px);
+}
+
+/* Fade out the second bar */
+.change .bar2 {
+  opacity: 0;
+}
+
+/* Rotate the last bar */
+.change .bar3 {
+  -webkit-transform: rotate(45deg) translate(-1px, -6px);
+  transform: rotate(45deg) translate(-1px, -6px);
+  -moz-transform: rotate(45deg) translate(-1px, -6px);
+  -ms-transform: rotate(45deg) translate(-1px, -6px);
+  -o-transform: rotate(45deg) translate(-1px, -6px);
+}
+
+.nav-btn {
+  background-color: rgb(224, 236, 247);
+  border: 2px solid rgb(21, 126, 255);
+  color: rgb(21, 126, 255);
+  font-weight: bold;
+  margin: 1% 0;
+  padding: 1% 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-size: 1em;
+  text-align: center;
+  justify-content: center;
+  border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  width: 150px;
+  height: 40px;
+}
+
+/* !INTRODUCTION */
+.intro {
+  width: 90%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  margin: 0 auto;
+}
+
+.intro h3,
+.intro p {
+  color: rgb(88, 88, 88);
+}
+
+.intro h3 {
+  text-transform: uppercase;
+  font-size: 1em;
+  line-height: 1em;
+  letter-spacing: 3px;
+}
+
+.intro h1 {
+  font-weight: 700;
+  font-size: 4em;
+  line-height: 70px;
+}
+
+.intro p {
+  font-weight: normal;
+  line-height: 2em;
+  font-size: 1.25em;
+  margin: 18px 0px 15px 0px;
+}
+
+.email-button {
+  width: 38%;
+  display: flex;
+  justify-content: space-between;
+  margin: 5px 0px 20px 0px;
+}
+
+.input-email {
+  width: 58%;
+  font-size: 1.2em;
+  line-height: 1.25em;
+  height: 60px;
+  border: none;
+  padding: 5%;
+  background: #eef4f5;
+  color: rgb(123, 127, 133);
+  border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+}
+
+.intro-btn {
+  width: 40%;
+  background-color: rgb(252, 74, 43);
+  color: #fff;
+  border: none;
+  font-weight: bold;
+  height: 60px;
+  font-size: 1.2em;
+  line-height: 1.25em;
+  border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+}
+
+.intro h4 {
+  font-weight: normal;
+  color: #878b90;
+  font-size: 1.1em;
+  line-height: 1.2em;
+}
+
+/* !FEATURE AREA */
+.feature-area {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+}
+
+section {
+  display: flex;
+  align-items: flex-start;
+}
+
+.right-area {
+  display: flex;
+  flex-direction: column;
+}
+
+.feature-area img {
+  margin-right: 25px;
+}
+
+.feature-area h3 {
+  font-size: 1.25em;
+  line-height: 1.75em;
+}
+
+.feature-area p {
+  color: #666666;
+  font-size: 1em;
+  line-height: 1.5em;
+}
+
+/* 24 Jul 2022 11:39 */
